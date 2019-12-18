@@ -8,8 +8,7 @@ class Player:
         self.marker = marker
 
     def __repr__(self):
-        return "Player name: {} \n \
-                Marker: {}".format(self.name, self.marker)
+        return "Player name: {} \nMarker: {}".format(self.name, self.marker)
 
 
     
