@@ -99,7 +99,7 @@ class Game:
         if all(np.diagonal(self.board) == self.player_dict[self.chance].marker):
             return True
 
-        if all(np.flipud(self.board).diagonal == self.player_dict[self.chance].marker):
+        if all(np.flipud(self.board).diagonal() == self.player_dict[self.chance].marker):
             return True
 
         return False
@@ -111,7 +111,7 @@ class Game:
         
 
     def __repr__(self):
-        game_info = "Current state of the board: {}".format(self.board)
+        game_info = "Current state of the board: \n{}".format(self.board)
         player_info = "Player info: {} \n{}".format(str(self.player1), str(self.player2))
         return "{} \n {}".format(game_info, player_info)
 
