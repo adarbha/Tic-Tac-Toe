@@ -119,6 +119,7 @@ class Game:
     def __repr__(self):
         game_info = "Current state of the board: \n{}".format(self.board)
         player_info = "Player1: \n{}\nPlayer2: \n{}".format(str(self.player1), str(self.player2))
-        return "{} \n {}".format(game_info, player_info)
+        chance_to_play = "Chance to play: {}".format(self.chance)
+        return "{} \n {} \n {}".format(game_info, player_info, chance_to_play)
 
     
