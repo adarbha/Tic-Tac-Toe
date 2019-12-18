@@ -13,7 +13,6 @@ class Game:
     def register_player1(self, player):
         self.player1 = player
         print(self.player1)
-        print("\n")
         print("is registered!")
 
     def register_player2(self, player):
@@ -27,6 +26,8 @@ class Game:
             return
 
         self.player2 = player
+        print(self.player2)
+        print("is registered!")
 
     def start(self):
         self.board = np.zeros((3,3), dtype = int).astype(str)
