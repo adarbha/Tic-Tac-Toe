@@ -90,7 +90,7 @@ class Game:
         print("Its {} chance to play now".format(self.chance))
 
 
-    def is_game_over(self)
+    def is_game_over(self):
         
         for i in range(3):
             # Horizontal check
