@@ -68,7 +68,7 @@ class Game:
 
 
         if self.is_game_over():
-            print("{} - Wins!".format(player_name))
+            print("######################{} - Wins!#############################".format(player_name))
             print(self)
             return
 
