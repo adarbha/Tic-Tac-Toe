@@ -84,9 +84,9 @@ class Game:
         if self.chance == self.player1.name:
             self.chance = self.player2.name
         else:
-            self.chance = self.player2.name
+            self.chance = self.player1.name
 
-        print("Its {} chance to play now".format(self.chance))
+        print("Its {}'s chance to play now".format(self.chance))
 
 
     def is_game_over(self):
