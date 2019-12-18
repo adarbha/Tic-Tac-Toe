@@ -30,6 +30,11 @@ class Game:
 
     def start(self):
         self.board = np.zeros((3,3), dtype = int).astype(str)
+
+        if (self.player1 is None) or (self.player2 is None):
+            print("Initialize players before starting the game")
+            return
+
         self.player_dict = {self.player1.name:self.player1, self.player2.name:self.player2} #This dict is used to pull up players based on name
 
         print(self)
