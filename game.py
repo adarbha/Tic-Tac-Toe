@@ -78,10 +78,10 @@ class Game:
             print(self)
             return
 
-        self.switch_chance()
+        self._switch_chance()
             
     
-    def switch_chance(self):
+    def _switch_chance(self):
         if self.chance == self.player1.name:
             self.chance = self.player2.name
         else:
@@ -90,7 +90,7 @@ class Game:
         print("Its {} chance to play now".format(self.chance))
 
 
-    def is_game_over(self):
+    def is_game_over(self)
         
         for i in range(3):
             # Horizontal check
