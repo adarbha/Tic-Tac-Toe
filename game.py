@@ -112,7 +112,7 @@ class Game:
 
     def __repr__(self):
         game_info = "Current state of the board: {}".format(self.board)
-        player_info = "{} \n {}".format(repr(self.player1), repr(self.player2))
+        player_info = "Player info: {} \n{}".format(str(self.player1), str(self.player2))
         return "{} \n {}".format(game_info, player_info)
 
     
