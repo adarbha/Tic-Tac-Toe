@@ -1,5 +1,5 @@
 import numpy as np
-from player import player
+from player import Player
 
 class Game:
     '''Template of the game class for creating a new game'''
@@ -18,11 +18,11 @@ class Game:
 
     def register_player2(self, player):
         # Check if this player's name and marker are unique
-        if player.name = self.player1.name:
+        if player.name == self.player1.name:
             print("Player1 used this name already, please use a different name")
             return
 
-        if player.marker = self.player1.marker:
+        if player.marker == self.player1.marker:
             print("Player1 used this marker already, plaease use a different marker")
             return
 
@@ -42,36 +42,37 @@ class Game:
         ''' player_name - player_name that is set to play the round
             row - row number of a 3X3 numpy matrix
             col - column number of a 3x3 numpy matrix'''
+        
 
-            if (self.player1.name != player_name) or (self.player2.name != player_name):
-                print("Player name has to be from one of the registered users")
-                print("It is {}'s chance to play".format(self.chance))
-                return
+        if (self.player1.name != player_name) or (self.player2.name != player_name):
+            print("Player name has to be from one of the registered users")
+            print("It is {}'s chance to play".format(self.chance))
+            return
 
-            if self.chance != player.name:
-                print("Only {} is allowed to place the marker".format(self.chance))
-                return
+        if self.chance != player.name:
+            print("Only {} is allowed to place the marker".format(self.chance))
+            return
             
 
-            if self.board[row][col] != 0:
-                print("Thats not a vacant spot. You can't place your marker there")
-                return
-            else:
-                self.board[row][col] = self.player_dict[player_name].marker 
+        if self.board[row][col] != 0:
+            print("Thats not a vacant spot. You can't place your marker there")
+            return
+        else:
+            self.board[row][col] = self.player_dict[player_name].marker 
                 
 
 
-            if self.is_game_over():
-                print("{} - Wins!".format(player_name))
-                print(self)
-                return
+        if self.is_game_over():
+            print("{} - Wins!".format(player_name))
+            print(self)
+            return
 
-            if self.is_board_full():
-                print("Its a tie!")
-                print(self)
-                return
+        if self.is_board_full():
+            print("Its a tie!")
+            print(self)
+            return
 
-            self.switch_chance()
+        self.switch_chance()
             
     
     def switch_chance(self):
@@ -111,7 +112,7 @@ class Game:
 
     def __repr__(self):
         game_info = "Current state of the board: {}".format(self.board)
-        player_info = "{} \n {}".format(repr(self.player1, self.player2))
+        player_info = "{} \n {}".format(repr(self.player1), repr(self.player2))
         return "{} \n {}".format(game_info, player_info)
 
     
