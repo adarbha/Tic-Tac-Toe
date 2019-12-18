@@ -50,7 +50,7 @@ class Game:
             col - column number of a 3x3 numpy matrix'''
         
 
-        if (self.player1.name != player_name) or (self.player2.name != player_name):
+        if (self.player1.name != player_name) and (self.player2.name != player_name):
             print("Player name has to be from one of the registered users")
             print("It is {}'s chance to play".format(self.chance))
             return
@@ -118,7 +118,7 @@ class Game:
 
     def __repr__(self):
         game_info = "Current state of the board: \n{}".format(self.board)
-        player_info = "Player info: {} \n{}".format(str(self.player1), str(self.player2))
+        player_info = "Player info: \n{} \n{}".format(str(self.player1), str(self.player2))
         return "{} \n {}".format(game_info, player_info)
 
     
