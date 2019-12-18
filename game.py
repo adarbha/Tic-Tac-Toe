@@ -38,10 +38,9 @@ class Game:
 
         self.player_dict = {self.player1.name:self.player1, self.player2.name:self.player2} #This dict is used to pull up players based on name
 
-        print(self)
-
         print("Player1 - please place your marker")
         self.chance = self.player1.name # Register the current player name to chance
+        print(self)
 
 
     def place_marker(self, player_name, row, col):
@@ -60,7 +59,7 @@ class Game:
             return
             
 
-        if self.board[row][col] != 0:
+        if self.board[row][col] != '0':
             print("Thats not a vacant spot. You can't place your marker there")
             return
         else:
