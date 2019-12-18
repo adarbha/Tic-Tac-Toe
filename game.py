@@ -55,7 +55,7 @@ class Game:
             print("It is {}'s chance to play".format(self.chance))
             return
 
-        if self.chance != player.name:
+        if self.chance != player_name:
             print("Only {} is allowed to place the marker".format(self.chance))
             return
             
