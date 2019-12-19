@@ -1,7 +1,7 @@
 import unittest
 import numpy as np
-from game import Game
-from player import Player
+from tictactoeadarbha.game import Game
+from tictactoeadarbha.player import Player
 
 class TestGame(unittest.TestCase):
 
