@@ -9,6 +9,7 @@ class Game:
         self.player1 = None
         self.player2 = None
         self.chance = None
+        self.player_dict = None
 
     def register_player1(self, player):
         self.player1 = player
