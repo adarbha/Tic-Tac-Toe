@@ -1,7 +1,7 @@
 # Tic-Tac-Toe
 This project aims to create pieces for creating a Tic-Tac-Toe game. Two important classes that are implemeted are Game and Player class.<br/>
-The best and the easiest way to install the package is to use
-<code>pip install tittactoeadarbha</code>
+The best and the easiest way to install the package is to use<br/>
+<code>pip install tittactoeadarbha</code><br/>
 The following is the expected workflow of how the pieces are assimilated
 * Create a game object and register player1 and player2 to that game,
   * from tictactoe_adarbha import Game
